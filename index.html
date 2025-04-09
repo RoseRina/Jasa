@@ -42,133 +42,139 @@
   </header>
 
   <div class="container">
-    <div class="card">
-      <div class="card-header">
-        <h2>🏮 Jasa Pembuatan NPWP</h2>
-        <span class="price-tag">Rp 50.000</span>
-      </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-header">
+          <h2>🏮 Jasa Pembuatan NPWP</h2>
+          <span class="price-tag">Rp 50.000</span>
+        </div>
 
-      <div class="timeline">
-        <svg viewBox="0 0 24 24">
-          <path d="M12,2C6.5,2 2,6.5 2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M17,13.59L12.71,9.29C12.32,8.9 11.69,8.9 11.3,9.29L7,13.59L8.41,15L12,11.41L15.59,15L17,13.59Z"/>
-        </svg>
-        <span>30 menit - 1 jam (jika tidak ada kendala)</span>
-      </div>
+        <div class="timeline">
+          <svg viewBox="0 0 24 24">
+            <path d="M12,2C6.5,2 2,6.5 2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M17,13.59L12.71,9.29C12.32,8.9 11.69,8.9 11.3,9.29L7,13.59L8.41,15L12,11.41L15.59,15L17,13.59Z"/>
+          </svg>
+          <span>30 menit - 1 jam (jika tidak ada kendala)</span>
+        </div>
 
-      <div class="requirements">
-        <h3>Dokumen yang Diperlukan:</h3>
-        <ul>
-          <li>KTP</li>
-          <li>KK</li>
-          <li>Nomor HP Aktif</li>
-          <li>Gmail Aktif</li>
-        </ul>
-      </div>
+        <div class="requirements">
+          <h3>Dokumen yang Diperlukan:</h3>
+          <ul>
+            <li>KTP</li>
+            <li>KK</li>
+            <li>Nomor HP Aktif</li>
+            <li>Gmail Aktif</li>
+          </ul>
+        </div>
 
-      <div class="tabs">
-        <div class="tab active" onclick="switchTab(event, 'npwp-info')">Tentang NPWP</div>
-        <div class="tab" onclick="switchTab(event, 'npwp-fungsi')">Fungsi & Kegunaan</div>
-      </div>
+        <div class="tabs">
+          <div class="tab active" onclick="switchTab(event, 'npwp-info')">Tentang NPWP</div>
+          <div class="tab" onclick="switchTab(event, 'npwp-fungsi')">Fungsi & Kegunaan</div>
+        </div>
 
-      <div id="npwp-info" class="tab-content active">
-        <p>NPWP (Nomor Pokok Wajib Pajak) adalah nomor identitas yang diberikan oleh Direktorat Jenderal Pajak kepada wajib pajak.</p>
-      </div>
+        <div id="npwp-info" class="tab-content active">
+          <p>NPWP (Nomor Pokok Wajib Pajak) adalah nomor identitas yang diberikan oleh Direktorat Jenderal Pajak kepada wajib pajak.</p>
+        </div>
 
-      <div id="npwp-fungsi" class="tab-content">
-        <ul class="info-list">
-          <li>Identitas resmi dalam administrasi perpajakan</li>
-          <li>Syarat untuk bayar dan lapor pajak</li>
-          <li>Diperlukan dalam urusan perbankan, pekerjaan, dan izin usaha</li>
-        </ul>
-      </div>
+        <div id="npwp-fungsi" class="tab-content">
+          <ul class="info-list">
+            <li>Identitas resmi dalam administrasi perpajakan</li>
+            <li>Syarat untuk bayar dan lapor pajak</li>
+            <li>Diperlukan dalam urusan perbankan, pekerjaan, dan izin usaha</li>
+          </ul>
+        </div>
 
-      <div class="btn-container">
-        <a class="btn" href="https://wa.me/6285752083533?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20NPWP.%20Mohon%20informasi%20lebih%20lanjut." target="_blank">Pesan Sekarang</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <h2>🔐 Jasa Pembuatan EFIN</h2>
-        <span class="price-tag">Rp 100.000</span>
-      </div>
-
-      <div class="timeline">
-        <svg viewBox="0 0 24 24">
-          <path d="M12,2C6.5,2 2,6.5 2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M17,13.59L12.71,9.29C12.32,8.9 11.69,8.9 11.3,9.29L7,13.59L8.41,15L12,11.41L15.59,15L17,13.59Z"/>
-        </svg>
-        <span>30 menit - 1 jam (jika tidak ada kendala)</span>
-      </div>
-
-      <div class="requirements">
-        <h3>Data yang Diperlukan:</h3>
-        <ul>
-          <li>Gmail NPWP Kamu</li>
-          <li>Nomor HP NPWP Kamu</li>
-        </ul>
-        <div class="warning-note">
-          <p>⚠️ Catatan: Jika lupa/tidak tahu data di atas, pembuatan EFIN hanya bisa dilakukan melalui KPP terdekat.</p>
+        <div class="btn-container">
+          <a class="btn" href="https://wa.me/6285752083533?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20NPWP.%20Mohon%20informasi%20lebih%20lanjut." target="_blank">Pesan Sekarang</a>
         </div>
       </div>
+    </div>
 
-      <div class="tabs">
-        <div class="tab active" onclick="switchTab(event, 'efin-info')">Tentang EFIN</div>
-      </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-header">
+          <h2>🔐 Jasa Pembuatan EFIN</h2>
+          <span class="price-tag">Rp 100.000</span>
+        </div>
 
-      <div id="efin-info" class="tab-content active">
-        <p>EFIN NPWP (Electronic Filing Identification Number) adalah kode unik dari DJP untuk aktivasi dan akses layanan pajak online, seperti e-Filing.</p>
-      </div>
+        <div class="timeline">
+          <svg viewBox="0 0 24 24">
+            <path d="M12,2C6.5,2 2,6.5 2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M17,13.59L12.71,9.29C12.32,8.9 11.69,8.9 11.3,9.29L7,13.59L8.41,15L12,11.41L15.59,15L17,13.59Z"/>
+          </svg>
+          <span>30 menit - 1 jam (jika tidak ada kendala)</span>
+        </div>
 
-      <div class="btn-container">
-        <a class="btn" href="https://wa.me/6285752083533?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20EFIN.%20Mohon%20informasi%20lebih%20lanjut." target="_blank">Pesan Sekarang</a>
+        <div class="requirements">
+          <h3>Data yang Diperlukan:</h3>
+          <ul>
+            <li>Gmail NPWP Kamu</li>
+            <li>Nomor HP NPWP Kamu</li>
+          </ul>
+          <div class="warning-note">
+            <p>⚠️ Catatan: Jika lupa/tidak tahu data di atas, pembuatan EFIN hanya bisa dilakukan melalui KPP terdekat.</p>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <div class="tab active" onclick="switchTab(event, 'efin-info')">Tentang EFIN</div>
+        </div>
+
+        <div id="efin-info" class="tab-content active">
+          <p>EFIN NPWP (Electronic Filing Identification Number) adalah kode unik dari DJP untuk aktivasi dan akses layanan pajak online, seperti e-Filing.</p>
+        </div>
+
+        <div class="btn-container">
+          <a class="btn" href="https://wa.me/6285752083533?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20EFIN.%20Mohon%20informasi%20lebih%20lanjut." target="_blank">Pesan Sekarang</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <h2>🎋 Jasa Pembuatan SIUP/NIB</h2>
-        <span class="price-tag">Rp 150.000</span>
-      </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-header">
+          <h2>🎋 Jasa Pembuatan SIUP/NIB</h2>
+          <span class="price-tag">Rp 150.000</span>
+        </div>
 
-      <div class="timeline">
-        <svg viewBox="0 0 24 24">
-          <path d="M12,2C6.5,2 2,6.5 2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M17,13.59L12.71,9.29C12.32,8.9 11.69,8.9 11.3,9.29L7,13.59L8.41,15L12,11.41L15.59,15L17,13.59Z"/>
-        </svg>
-        <span>30 menit - 1 jam (jika tidak ada kendala)</span>
-      </div>
+        <div class="timeline">
+          <svg viewBox="0 0 24 24">
+            <path d="M12,2C6.5,2 2,6.5 2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M17,13.59L12.71,9.29C12.32,8.9 11.69,8.9 11.3,9.29L7,13.59L8.41,15L12,11.41L15.59,15L17,13.59Z"/>
+          </svg>
+          <span>30 menit - 1 jam (jika tidak ada kendala)</span>
+        </div>
 
-      <div class="requirements">
-        <h3>Data yang Diperlukan:</h3>
-        <ul>
-          <li>NIK</li>
-          <li>Data Usaha</li>
-        </ul>
-      </div>
+        <div class="requirements">
+          <h3>Data yang Diperlukan:</h3>
+          <ul>
+            <li>NIK</li>
+            <li>Data Usaha</li>
+          </ul>
+        </div>
 
-      <div class="tabs">
-        <div class="tab active" onclick="switchTab(event, 'nib-info')">Tentang NIB</div>
-        <div class="tab" onclick="switchTab(event, 'nib-fungsi')">Fungsi & Kegunaan</div>
-        <div class="tab" onclick="switchTab(event, 'siup-info')">Tentang SIUP</div>
-      </div>
+        <div class="tabs">
+          <div class="tab active" onclick="switchTab(event, 'nib-info')">Tentang NIB</div>
+          <div class="tab" onclick="switchTab(event, 'nib-fungsi')">Fungsi & Kegunaan</div>
+          <div class="tab" onclick="switchTab(event, 'siup-info')">Tentang SIUP</div>
+        </div>
 
-      <div id="nib-info" class="tab-content active">
-        <p>NIB (Nomor Induk Berusaha) adalah identitas pelaku usaha yang diterbitkan oleh OSS (Online Single Submission) sebagai tanda legalitas usaha.</p>
-      </div>
+        <div id="nib-info" class="tab-content active">
+          <p>NIB (Nomor Induk Berusaha) adalah identitas pelaku usaha yang diterbitkan oleh OSS (Online Single Submission) sebagai tanda legalitas usaha.</p>
+        </div>
 
-      <div id="nib-fungsi" class="tab-content">
-        <ul class="info-list">
-          <li>Pengganti SIUP, TDP, dan izin lainnya</li>
-          <li>Syarat untuk operasional usaha secara legal</li>
-          <li>Dibutuhkan untuk ekspor-impor, perbankan, dan pengurusan pajak</li>
-        </ul>
-      </div>
+        <div id="nib-fungsi" class="tab-content">
+          <ul class="info-list">
+            <li>Pengganti SIUP, TDP, dan izin lainnya</li>
+            <li>Syarat untuk operasional usaha secara legal</li>
+            <li>Dibutuhkan untuk ekspor-impor, perbankan, dan pengurusan pajak</li>
+          </ul>
+        </div>
 
-      <div id="siup-info" class="tab-content">
-        <p>SIUP (Surat Izin Usaha Perdagangan) adalah izin yang dahulu wajib dimiliki oleh pelaku usaha perdagangan.</p>
-      </div>
+        <div id="siup-info" class="tab-content">
+          <p>SIUP (Surat Izin Usaha Perdagangan) adalah izin yang dahulu wajib dimiliki oleh pelaku usaha perdagangan.</p>
+        </div>
 
-      <div class="btn-container">
-        <a class="btn" href="https://wa.me/6285752083533?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20SIUP%2FNIB.%20Mohon%20informasi%20lebih%20lanjut." target="_blank">Pesan Sekarang</a>
+        <div class="btn-container">
+          <a class="btn" href="https://wa.me/6285752083533?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20SIUP%2FNIB.%20Mohon%20informasi%20lebih%20lanjut." target="_blank">Pesan Sekarang</a>
+        </div>
       </div>
     </div>
   </div>
