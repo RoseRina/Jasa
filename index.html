@@ -366,7 +366,7 @@
 
       .container {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 3rem;
         padding: 0 1rem;
         margin: 2rem auto;
       }
@@ -374,7 +374,7 @@
       .card {
         border-radius: 16px;
         padding: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         border: 1px solid var(--card-border);
         position: relative;
@@ -383,17 +383,13 @@
       .card::after {
         content: '';
         position: absolute;
-        bottom: -1.5rem;
+        bottom: -2rem;
         left: 50%;
         transform: translateX(-50%);
-        width: 50%;
+        width: 70%;
         height: 1px;
         background: linear-gradient(90deg, transparent, var(--success-color), transparent);
         opacity: 0.3;
-      }
-
-      .card:last-child::after {
-        display: none;
       }
 
       .card-header h2 {
