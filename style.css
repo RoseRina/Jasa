@@ -110,34 +110,61 @@ header::before {
 
 .container {
   max-width: 1200px;
-  margin: 1.5rem auto;
+  margin: 2.5rem auto;
   padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 2rem;
   position: relative;
   z-index: 1;
 }
 
 .card {
-  background: var(--card-bg);
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.98), rgba(248, 248, 248, 0.95));
   border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--card-border);
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin: 0.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  transform-origin: center;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, var(--success-color), var(--success-hover));
+  z-index: 1;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.3), transparent 70%);
+  border-top-right-radius: 20px;
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  border-color: rgba(212, 175, 55, 0.25);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.18), 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
 }
 
 .card-header {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .card-header h2 {
@@ -152,13 +179,14 @@ header::before {
 
 .price-tag {
   display: inline-block;
-  background: #d4af37;
+  background: linear-gradient(135deg, var(--success-color), var(--success-hover));
   color: white;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 50px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.1rem;
   margin-top: 0.5rem;
+  box-shadow: 0 3px 8px rgba(212, 175, 55, 0.25);
 }
 
 .timeline {
@@ -339,18 +367,22 @@ header::before {
     grid-template-columns: 1fr;
     padding: 1rem;
     margin: 1rem auto;
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
 
   .card {
-    background: var(--card-bg);
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.98), rgba(248, 248, 248, 0.95));
     border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.75rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     border: 1px solid var(--card-border);
-    margin: 0;
+    margin: 0.75rem 0.5rem;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .card::before {
+    height: 5px;
   }
 
   .container > :last-child {
