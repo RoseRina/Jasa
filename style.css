@@ -364,28 +364,49 @@ header::before {
   }
 
   .container {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+    display: block;
+    padding: 0.5rem;
     margin: 1rem auto;
-    gap: 2.5rem;
   }
 
   .card {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
     background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.98), rgba(248, 248, 248, 0.95));
     border-radius: 16px;
     padding: 1.75rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border: 1px solid var(--card-border);
-    margin: 0.75rem 0.5rem;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   }
 
-  .card::before {
-    height: 5px;
+  .card:after {
+    display: none;
   }
 
-  .container > :last-child {
+  .container > div {
+    margin-bottom: 3rem;
+    position: relative;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .container > div:before {
+    content: '';
+    position: absolute;
+    top: -0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 30%;
+    background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.6), transparent);
+    border-radius: 2px;
+  }
+
+  .container > div:last-child {
     margin-bottom: 2rem;
   }
 
@@ -511,17 +532,18 @@ header::before {
   }
 
   .container {
-    padding: 0.75rem;
-    gap: 1.25rem;
+    padding: 0.25rem;
+  }
+
+  .container > div {
+    margin-bottom: 2.5rem;
+    padding: 0.25rem;
   }
 
   .card {
-    padding: 1.25rem;
-    margin: 0;
-  }
-
-  .card::after {
-    bottom: -1rem;
+    padding: 1.5rem;
+    border-width: 3px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
   }
 
   .card-header h2 {
@@ -1073,5 +1095,108 @@ header::before {
   to {
     opacity: 1;
     transform: translate(-50%, -50%);
+  }
+}
+
+/* Tambahkan styling dasar untuk card-wrapper */
+.card-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop view tetap menggunakan grid layout */
+@media screen and (min-width: 769px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    display: grid;
+  }
+  
+  .card-wrapper {
+    height: 100%;
+  }
+  
+  .card {
+    height: 100%;
+    flex: 1;
+  }
+}
+
+/* Mobile view dengan card-wrapper */
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem auto;
+  }
+
+  .card-wrapper {
+    margin-bottom: 3.5rem; /* Jarak besar antar kartu */
+    position: relative;
+    padding: 0.75rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Tambahkan label visual untuk jasa */
+  .card-wrapper:before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 40%;
+    background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.6), transparent);
+    border-radius: 2px;
+  }
+
+  /* Tambahkan pembatas visual di bawah wrapper */
+  .card-wrapper:after {
+    content: '• • •';
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(212, 175, 55, 0.8);
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-wrapper:last-child:after {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.98), rgba(248, 248, 248, 0.95));
+    border-radius: 16px;
+    padding: 1.75rem;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+}
+
+/* Tampilan ekstra kecil */
+@media screen and (max-width: 480px) {
+  .card-wrapper {
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .card-wrapper:after {
+    bottom: -2rem;
+    font-size: 1.2rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+    border-width: 2px;
   }
 } 
