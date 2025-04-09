@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Proteksi view-source -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
+  <script>
+    // Redirect jika mencoba akses view-source
+    if(window.location.protocol === 'view-source:') {
+      window.location.href = window.location.href.replace('view-source:', 'https:');
+    }
+    
+    // Proteksi tambahan untuk view-source
+    if(window.location.href.indexOf('view-source:') !== -1) {
+      window.location.href = 'about:blank';
+    }
+
+    // Cek setiap 100ms
+    setInterval(function() {
+      if(window.location.protocol === 'view-source:' || window.location.href.indexOf('view-source:') !== -1) {
+        window.location.href = 'about:blank';
+      }
+    }, 100);
+  </script>
+  <title>Ferdi Jasa - Solusi Dokumen Usaha Terpercaya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #c41e3a;
+      --primary-dark: #8b0000;
+      --success-color: #d4af37;
+      --success-hover: #b8860b;
+      --accent-green: #2d5a27;
+      --accent-brown: #8b4513;
+      --bg-color: #f8f3e6;
+      --text-color: #2d2d2d;
+      --card-bg: rgba(255, 255, 255, 0.95);
+      --card-border: rgba(212, 175, 55, 0.15);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, var(--accent-green), var(--accent-brown));
+      color: var(--text-color);
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
+        url('data:image/svg+xml,<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg"><path d="M75 15L90 60L135 75L90 90L75 135L60 90L15 75L60 60L75 15Z" fill="%23d4af37" fill-opacity="0.05"/></svg>');
+      background-size: 150px 150px;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        linear-gradient(rgba(0,0,0,0.1), transparent),
+        url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10L61 39L92 50L61 61L50 90L39 61L8 50L39 39L50 10Z" fill="%23ffd700" fill-opacity="0.1"/></svg>');
+      background-size: 100px 100px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: white;
+      padding: 8px;
+      border: 2px solid rgba(212, 175, 55, 0.3); /* Border emas tipis */
+    }
+
+    .logo:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+      border-color: rgba(212, 175, 55, 0.6);
+    }
+
+    .header-content h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-content p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0 0;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 1.5rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--card-border);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      border-color: rgba(212, 175, 55, 0.25);
+    }
+
+    .card-header {
+      margin-bottom: 0.75rem;
+    }
+
+    .card-header h2 {
+      color: var(--primary-color);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .price-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--success-color), var(--success-hover));
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);
+    }
+
+    .timeline {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #666;
+      font-size: 0.8rem;
+      margin: 0.5rem 0;
+      padding: 0.4rem 0.75rem;
+      background: rgba(0, 0, 0, 0.02);
+      border-radius: 6px;
+    }
+
+    .timeline svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--success-color);
+      opacity: 0.8;
+    }
+
+    .requirements {
+      flex-grow: 1;
+      margin: 0.75rem 0;
+      padding: 0.875rem;
+      background: rgba(45, 90, 39, 0.03);
+      border-radius: 12px;
+    }
+
+    .requirements h3 {
+      color: var(--accent-green);
+      margin: 0 0 0.5rem 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .requirements ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .requirements li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: 0.8rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .requirements li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success-color);
+      font-weight: 500;
+    }
+
+    .warning-note {
+      margin-top: 0.75rem;
+      padding: 0.75rem;
+      background: rgba(255, 247, 237, 0.8);
+      border: 1px solid rgba(234, 88, 12, 0.15);
+      border-radius: 8px;
+    }
+
+    .warning-note p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: #9a3412;
+      line-height: 1.4;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 0.75rem;
+      margin: 1rem 0 0.5rem;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+      padding-bottom: 0.25rem;
+    }
+
+    .tab {
+      padding: 0.35rem 0;
+      color: #666;
+      opacity: 0.7;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+      font-size: 0.8rem;
+    }
+
+    .tab:hover {
+      opacity: 0.9;
+      color: var(--primary-color);
+    }
+
+    .tab.active {
+      color: var(--primary-color);
+      border-bottom-color: var(--success-color);
+      opacity: 1;
+      font-weight: 500;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .btn-container {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.25rem;
+      background: linear-gradient(135deg, var(--success-color), var(--success-hover));
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+      width: 100%;
+      max-width: 180px;
+    }
+
+    .btn::after {
+      content: '→';
+      margin-left: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(212, 175, 55, 0.2);
+    }
+
+    .btn:hover::after {
+      transform: translateX(3px);
+    }
+
+    @media screen and (max-width: 1200px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+      }
+
+      .header-content h1 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+      }
+
+      .header-content p {
+        font-size: 1rem;
+      }
+
+      .logo {
+        height: 80px;
+        width: 80px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+      }
+
+      .card {
+        padding: 1.5rem;
+      }
+
+      .card-header h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .price-tag {
+        padding: 0.35rem 0.7rem;
+        font-size: 0.8rem;
+      }
+
+      .timeline {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+        margin: 0.5rem 0;
+      }
+
+      .requirements {
+        padding: 0.875rem;
+        margin: 0.75rem 0;
+      }
+
+      .requirements h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .requirements li {
+        font-size: 0.8rem;
+        padding-left: 1.1rem;
+      }
+
+      .warning-note {
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+      }
+
+      .warning-note p {
+        font-size: 0.75rem;
+      }
+
+      .tabs {
+        gap: 0.75rem;
+        margin: 1rem 0 0.5rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .tab {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        padding: 0.35rem 0;
+      }
+
+      .tab-content {
+        padding: 0.75rem;
+        font-size: 0.8rem;
+      }
+
+      .btn {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.85rem;
+        max-width: 100%;
+      }
+
+      /* Testimonial Mobile Styles */
+      .testimonials {
+        margin: 3rem auto 2rem;
+        padding: 0 1rem;
+      }
+
+      .testimonials h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .testimonial-content {
+        padding: 1rem;
+      }
+
+      .testimonial-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+      }
+
+      .author-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+
+      .author-name {
+        font-size: 0.9rem;
+      }
+
+      .author-location {
+        font-size: 0.8rem;
+      }
+
+      .testimonial-dots {
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+      }
+
+      /* About Section Mobile Styles */
+      .about-section {
+        padding: 2.5rem 0;
+      }
+
+      .about-container {
+        padding: 0 1rem;
+      }
+
+      .about-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .about-content {
+        gap: 1.5rem;
+      }
+
+      .profile-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+      }
+
+      .about-text {
+        padding: 1.25rem;
+      }
+
+      .about-text p {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    /* Small Mobile Devices */
+    @media screen and (max-width: 360px) {
+      .header-content h1 {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 1.25rem;
+      }
+
+      .card-header h2 {
+        font-size: 1.1rem;
+      }
+
+      .requirements {
+        padding: 0.75rem;
+      }
+
+      .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Fix for iOS Safari 100vh issue */
+    @supports (-webkit-touch-callout: none) {
+      body {
+        min-height: -webkit-fill-available;
+      }
+    }
+
+    /* Improve touch targets on mobile */
+    @media (hover: none) and (pointer: coarse) {
+      .btn, .tab {
+        min-height: 44px;
+      }
+
+      .requirements li {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+      }
+    }
+
+    /* Testimonial Styles */
+    .testimonials {
+      max-width: 1000px;
+      margin: 5rem auto 3rem;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      margin-top: 2rem;
+    }
+
+    .testimonial-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .testimonial-slide {
+      flex: 0 0 100%;
+      padding: 2rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .testimonial-content {
+      position: relative;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, rgba(45, 90, 39, 0.05), rgba(139, 69, 19, 0.05));
+      border-radius: 16px;
+      border: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .testimonial-content::before {
+      content: '"';
+      position: absolute;
+      top: -0.5rem;
+      left: 1rem;
+      font-size: 4rem;
+      color: var(--success-color);
+      opacity: 0.2;
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--success-color), var(--success-hover));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .author-info {
+      text-align: left;
+    }
+
+    .author-name {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 0.2rem;
+    }
+
+    .author-location {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .testimonial-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: var(--success-color);
+      transform: scale(1.2);
+    }
+
+    @media screen and (max-width: 768px) {
+      .testimonials {
+        margin: 2rem auto;
+      }
+
+      .testimonial-slide {
+        padding: 1.5rem;
+      }
+
+      .testimonial-content {
+        padding: 1rem;
+      }
+    }
+
+    .about-section {
+      padding: 4rem 0;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      margin-top: 3rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .about-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .about-container h2 {
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .about-container h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--success-color), transparent);
+    }
+
+    .about-content {
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+
+    .about-image {
+      flex-shrink: 0;
+    }
+
+    .profile-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--success-color), var(--success-hover));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      border: 3px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .about-text {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--card-border);
+    }
+
+    .about-text p {
+      color: var(--text-color);
+      margin: 0 0 1rem 0;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-text strong {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: 768px) {
+      .about-section {
+        padding: 3rem 0;
+      }
+
+      .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .about-text {
+        padding: 1.5rem;
+      }
+
+      .profile-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="img/logo.png" alt="Logo Jasa" class="logo">
+      <div>
+        <h1>Jasa - Solusi Dokumen Usaha Terpercaya</h1>
+        <p>Proses cepat, mudah, dan terpercaya!</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>🏮 Jasa Pembuatan NPWP</h2>
+        <span class="price-tag">Rp 50.000</span>
+      </div>
+
+      <div class="timeline">
+        <svg viewBox="0 0 24 24"><path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+        <span>30 menit – 1 jam (jika tidak ada kendala)</span>
+      </div>
+
+      <div class="requirements">
+        <h3>Dokumen yang Diperlukan:</h3>
+        <ul>
+          <li>KTP</li>
+          <li>KK</li>
+          <li>Nomor HP Aktif</li>
+          <li>Gmail Aktif</li>
+        </ul>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" onclick="switchTab(event, 'npwp-info')">Tentang NPWP</div>
+        <div class="tab" onclick="switchTab(event, 'npwp-fungsi')">Fungsi & Kegunaan</div>
+      </div>
+
+      <div id="npwp-info" class="tab-content active">
+        <p>NPWP (Nomor Pokok Wajib Pajak) adalah nomor identitas yang diberikan oleh Direktorat Jenderal Pajak kepada wajib pajak.</p>
+      </div>
+
+      <div id="npwp-fungsi" class="tab-content">
+        <ul class="info-list">
+          <li>Identitas resmi dalam administrasi perpajakan</li>
+          <li>Syarat untuk bayar dan lapor pajak</li>
+          <li>Diperlukan dalam urusan perbankan, pekerjaan, dan izin usaha</li>
+        </ul>
+      </div>
+
+      <div class="btn-container">
+        <a class="btn" href="https://wa.me/6285752083533?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20NPWP.%20Mohon%20informasi%20lebih%20lanjut." target="_blank">Pesan Sekarang</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>🔐 Jasa Pembuatan EFIN</h2>
+        <span class="price-tag">Rp 100.000</span>
+      </div>
+
+      <div class="timeline">
+        <svg viewBox="0 0 24 24"><path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+        <span>30 menit – 1 jam (jika tidak ada kendala)</span>
+      </div>
+
+      <div class="requirements">
+        <h3>Data yang Diperlukan:</h3>
+        <ul>
+          <li>Gmail NPWP Kamu</li>
+          <li>Nomor HP NPWP Kamu</li>
+        </ul>
+        <div class="warning-note">
+          <p>⚠️ Catatan: Jika lupa/tidak tahu data di atas, pembuatan EFIN hanya bisa dilakukan melalui KPP terdekat.</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" onclick="switchTab(event, 'efin-info')">Tentang EFIN</div>
+      </div>
+
+      <div id="efin-info" class="tab-content active">
+        <p>EFIN NPWP (Electronic Filing Identification Number) adalah kode unik dari DJP untuk aktivasi dan akses layanan pajak online, seperti e-Filing.</p>
+      </div>
+
+      <div class="btn-container">
+        <a class="btn" href="https://wa.me/6285752083533?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20EFIN.%20Mohon%20informasi%20lebih%20lanjut." target="_blank">Pesan Sekarang</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>🎋 Jasa Pembuatan SIUP/NIB</h2>
+        <span class="price-tag">Rp 150.000</span>
+      </div>
+
+      <div class="timeline">
+        <svg viewBox="0 0 24 24"><path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+        <span>30 menit – 1 jam (jika tidak ada kendala)</span>
+      </div>
+
+      <div class="requirements">
+        <h3>Data yang Diperlukan:</h3>
+        <ul>
+          <li>NIK</li>
+          <li>Data Usaha</li>
+        </ul>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" onclick="switchTab(event, 'nib-info')">Tentang NIB</div>
+        <div class="tab" onclick="switchTab(event, 'nib-fungsi')">Fungsi & Kegunaan</div>
+        <div class="tab" onclick="switchTab(event, 'siup-info')">Tentang SIUP</div>
+      </div>
+
+      <div id="nib-info" class="tab-content active">
+        <p>NIB (Nomor Induk Berusaha) adalah identitas pelaku usaha yang diterbitkan oleh OSS (Online Single Submission) sebagai tanda legalitas usaha.</p>
+      </div>
+
+      <div id="nib-fungsi" class="tab-content">
+        <ul class="info-list">
+          <li>Pengganti SIUP, TDP, dan izin lainnya</li>
+          <li>Syarat untuk operasional usaha secara legal</li>
+          <li>Dibutuhkan untuk ekspor-impor, perbankan, dan pengurusan pajak</li>
+        </ul>
+      </div>
+
+      <div id="siup-info" class="tab-content">
+        <p>SIUP (Surat Izin Usaha Perdagangan) adalah izin yang dahulu wajib dimiliki oleh pelaku usaha perdagangan.</p>
+      </div>
+
+      <div class="btn-container">
+        <a class="btn" href="https://wa.me/6285752083533?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20pembuatan%20SIUP%2FNIB.%20Mohon%20informasi%20lebih%20lanjut." target="_blank">Pesan Sekarang</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <h2>Apa Kata Mereka?</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial-track">
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-text">Pelayanan sangat cepat dan profesional. Dalam waktu kurang dari 1 jam NPWP saya sudah jadi. Terima kasih banyak!</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">L</div>
+            <div class="author-info">
+              <div class="author-name">Liam Wong</div>
+              <div class="author-location">Singkawang</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-text">Proses pembuatan EFIN sangat mudah dan cepat. Sekarang saya bisa akses layanan pajak online dengan lancar. Thank you!</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <div class="author-name">Jessica Lin</div>
+              <div class="author-location">Bengkayang</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-text">Proses pembuatan NIB sangat mudah dan cepat. Staff sangat membantu dan menjelaskan dengan detail. Recommended!</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <div class="author-name">Michelle Chen</div>
+              <div class="author-location">Pontianak</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-text">Sangat puas dengan layanan yang diberikan. Semua proses transparan dan sesuai dengan yang dijanjikan.</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">D</div>
+            <div class="author-info">
+              <div class="author-name">David Tan</div>
+              <div class="author-location">Bengkayang</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="about-container">
+      <h2>Tentang Saya</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <div class="profile-circle">F</div>
+        </div>
+        <div class="about-text">
+          <p>Halo! Saya <strong>Ferdi</strong>, berasal dari Kalimantan Barat dan saat ini berusia 29 tahun.</p>
+          <p>Sejak kecil, saya sudah memiliki ketertarikan pada dunia teknologi. Sejak sekitar tahun 2008, saya mulai senang membantu orang lain dengan informasi yang saya ketahui.</p>
+          <p>Saya selalu berusaha menulis informasi sejelas dan sedetail mungkin. Karena itu, saya kurang suka ketika orang masih terus bertanya tentang hal-hal yang sudah saya jelaskan dengan rinci sebelumnya.</p>
+          <p>Saya sadar, ada orang-orang yang tidak menyukai sikap saya yang suka berbagi informasi. Tapi demi membantu orang lain, saya tidak peduli. Bagi saya, memberi manfaat jauh lebih penting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(event, contentId) {
+      // Get the parent tabs container
+      const tabsContainer = event.target.parentElement;
+      const card = tabsContainer.parentElement;
+      
+      // Remove active class from all tabs and contents in this card
+      const tabs = tabsContainer.getElementsByClassName('tab');
+      const contents = card.getElementsByClassName('tab-content');
+      
+      for (let tab of tabs) {
+        tab.classList.remove('active');
+      }
+      for (let content of contents) {
+        content.classList.remove('active');
+      }
+      
+      // Add active class to clicked tab and corresponding content
+      event.target.classList.add('active');
+      document.getElementById(contentId).classList.add('active');
+    }
+
+    // Initialize tabs
+    document.addEventListener('DOMContentLoaded', function() {
+      const defaultTabs = document.querySelectorAll('.tab.active');
+      defaultTabs.forEach(tab => {
+        const contentId = tab.getAttribute('onclick').match(/switchTab\(event,\s*'(.+?)'\)/)[1];
+        document.getElementById(contentId).classList.add('active');
+      });
+    });
+
+    // Testimonial Slider
+    const track = document.querySelector('.testimonial-track');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    const slideWidth = 100; // 100%
+
+    function updateSlider() {
+      // Update track position
+      track.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlider();
+    }
+
+    // Add click events to dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateSlider();
+      });
+    });
+
+    // Auto slide every 5 seconds (changed from 3)
+    setInterval(nextSlide, 5000);
+
+    // Disable right click
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' || 
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j')) || 
+        (e.ctrlKey && (e.key === 'U' || e.key === 'u'))
+      ) {
+        e.preventDefault();
+      }
+    });
+
+    // Disable text selection
+    document.addEventListener('selectstart', function(e) {
+      e.preventDefault();
+    });
+
+    // Disable copy
+    document.addEventListener('copy', function(e) {
+      e.preventDefault();
+    });
+
+    // Disable cut
+    document.addEventListener('cut', function(e) {
+      e.preventDefault();
+    });
+
+    // Disable paste
+    document.addEventListener('paste', function(e) {
+      e.preventDefault();
+    });
+
+    // Detect DevTools
+    let devtools = function() {};
+    devtools.toString = function() {
+      this.opened = true;
+      return '';
+    }
+    
+    console.log('%c', devtools);
+    
+    setInterval(function() {
+      if (window.devtools && window.devtools.opened) {
+        window.location.reload();
+      }
+      
+      // Check if dev tools is opened
+      if (
+        window.outerWidth - window.innerWidth > 160 || 
+        window.outerHeight - window.innerHeight > 160
+      ) {
+        window.location.reload();
+      }
+    }, 1000);
+
+    // Disable view source
+    document.onkeydown = function(e) {
+      if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+        return false;
+      }
+    };
+
+    // Obfuscated protection code
+    (function(_0x2c0d9a,_0x2e1953){var _0x1e5e7f=_0x2c0d9a();function _0x123456(_0x987654,_0x654321){return String['fromCharCode'](_0x987654-_0x654321);}while(!![]){try{if(window['location']['href']['indexOf']('view-source:')>-1){window['location']['href']='about:blank';}break;}catch(_0x3e2b1c){_0x1e5e7f['push'](_0x1e5e7f['shift']());}}}());
+
+    // Additional layer of protection
+    eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('4 2=3.5;6(2.7(\'8\')>-1){3.5=\'9:a\'}',11,11,'||b|window|var|location|if|indexOf|view-source|about|blank'.split('|'),0,{}));
+
+    // Continuous check with random delay
+    setInterval(function(){
+      var _0x4f8b=['location','href','indexOf','view-source:','about:blank'];
+      if(window[_0x4f8b[0]][_0x4f8b[1]][_0x4f8b[2]](_0x4f8b[3])>-1){
+        window[_0x4f8b[0]][_0x4f8b[1]]=_0x4f8b[4];
+      }
+    },Math.random()*200+50);
+  </script>
+
+  <footer>
+    &copy; 2025 Layanan Dokumen Online. All rights reserved.
+  </footer>
+
+</body>
+</html>
