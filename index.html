@@ -366,16 +366,34 @@
 
       .container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
         padding: 0 1rem;
-        margin: 1.5rem auto;
+        margin: 2rem auto;
       }
 
       .card {
         border-radius: 16px;
         padding: 1.5rem;
-        margin-bottom: 0.5rem;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        border: 1px solid var(--card-border);
+        position: relative;
+      }
+
+      .card::after {
+        content: '';
+        position: absolute;
+        bottom: -1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--success-color), transparent);
+        opacity: 0.3;
+      }
+
+      .card:last-child::after {
+        display: none;
       }
 
       .card-header h2 {
@@ -501,13 +519,17 @@
 
       .container {
         padding: 0 0.875rem;
-        margin: 1.25rem auto;
-        gap: 1.75rem;
+        margin: 1.5rem auto;
+        gap: 2rem;
       }
 
       .card {
         padding: 1.25rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card::after {
+        bottom: -1rem;
       }
 
       .card-header h2 {
