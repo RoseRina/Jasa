@@ -354,184 +354,27 @@
 
     @media screen and (max-width: 768px) {
       .header-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 1rem;
-        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+      }
+
+      .logo {
+        height: 70px;
+        width: 70px;
       }
 
       .header-content h1 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         line-height: 1.3;
       }
 
       .header-content p {
-        font-size: 1rem;
-      }
-
-      .logo {
-        height: 80px;
-        width: 80px;
+        font-size: 0.9rem;
       }
 
       .container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
         padding: 0 1rem;
-        margin: 1.5rem auto;
-      }
-
-      .card {
-        padding: 1.5rem;
-      }
-
-      .card-header h2 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .price-tag {
-        padding: 0.35rem 0.7rem;
-        font-size: 0.8rem;
-      }
-
-      .timeline {
-        font-size: 0.8rem;
-        padding: 0.5rem 0.75rem;
-        margin: 0.5rem 0;
-      }
-
-      .requirements {
-        padding: 0.875rem;
-        margin: 0.75rem 0;
-      }
-
-      .requirements h3 {
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .requirements li {
-        font-size: 0.8rem;
-        padding-left: 1.1rem;
-      }
-
-      .warning-note {
-        padding: 0.75rem;
-        margin-top: 0.5rem;
-      }
-
-      .warning-note p {
-        font-size: 0.75rem;
-      }
-
-      .tabs {
-        gap: 0.75rem;
-        margin: 1rem 0 0.5rem;
-        overflow-x: auto;
-        padding-bottom: 0.5rem;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .tab {
-        font-size: 0.8rem;
-        white-space: nowrap;
-        padding: 0.35rem 0;
-      }
-
-      .tab-content {
-        padding: 0.75rem;
-        font-size: 0.8rem;
-      }
-
-      .btn {
-        padding: 0.7rem 1.25rem;
-        font-size: 0.85rem;
-        max-width: 100%;
-      }
-
-      /* Testimonial Mobile Styles */
-      .testimonials {
-        margin: 3rem auto 2rem;
-        padding: 0 1rem;
-      }
-
-      .testimonials h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .testimonial-content {
-        padding: 1rem;
-      }
-
-      .testimonial-text {
-        font-size: 0.85rem;
-        line-height: 1.5;
-      }
-
-      .author-avatar {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-      }
-
-      .author-name {
-        font-size: 0.9rem;
-      }
-
-      .author-location {
-        font-size: 0.8rem;
-      }
-
-      .testimonial-dots {
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-
-      .dot {
-        width: 6px;
-        height: 6px;
-      }
-
-      /* About Section Mobile Styles */
-      .about-section {
-        padding: 2.5rem 0;
-      }
-
-      .about-container {
-        padding: 0 1rem;
-      }
-
-      .about-container h2 {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-      }
-
-      .about-content {
-        gap: 1.5rem;
-      }
-
-      .profile-circle {
-        width: 80px;
-        height: 80px;
-        font-size: 2rem;
-      }
-
-      .about-text {
-        padding: 1.25rem;
-      }
-
-      .about-text p {
-        font-size: 0.85rem;
-        margin-bottom: 0.75rem;
-      }
-    }
-
-    /* Small Mobile Devices */
-    @media screen and (max-width: 360px) {
-      .header-content h1 {
-        font-size: 1.5rem;
+        margin: 1rem auto;
       }
 
       .card {
@@ -542,13 +385,196 @@
         font-size: 1.1rem;
       }
 
+      .price-tag {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.7rem;
+      }
+
+      .timeline {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+      }
+
       .requirements {
         padding: 0.75rem;
       }
 
+      .requirements h3 {
+        font-size: 0.85rem;
+      }
+
+      .requirements li {
+        font-size: 0.8rem;
+        padding-left: 1.1rem;
+      }
+
+      .tab {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.5rem;
+      }
+
+      .tab-content {
+        font-size: 0.8rem;
+        padding: 0.75rem 0.5rem;
+      }
+
       .btn {
         padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+      }
+
+      /* Modal mobile styles */
+      .modal {
+        width: 90%;
+        padding: 1.25rem;
+      }
+
+      .modal-title {
+        font-size: 1.1rem;
+      }
+
+      .requirements-list li {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+      }
+
+      .modal-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+
+      /* Testimonial mobile styles */
+      .testimonial-slide {
+        padding: 1.25rem;
+      }
+
+      .testimonial-content {
+        padding: 1rem;
+      }
+
+      .testimonial-text {
+        font-size: 0.85rem;
+      }
+
+      .author-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+      }
+
+      .author-name {
+        font-size: 0.9rem;
+      }
+
+      .author-location {
         font-size: 0.8rem;
+      }
+    }
+
+    /* Small mobile devices */
+    @media screen and (max-width: 480px) {
+      .header-content {
+        padding: 1.25rem 0.75rem;
+      }
+
+      .logo {
+        height: 60px;
+        width: 60px;
+      }
+
+      .header-content h1 {
+        font-size: 1.3rem;
+      }
+
+      .header-content p {
+        font-size: 0.85rem;
+      }
+
+      .container {
+        padding: 0 0.75rem;
+        margin: 0.75rem auto;
+      }
+
+      .card {
+        padding: 1rem;
+      }
+
+      .card-header h2 {
+        font-size: 1rem;
+      }
+
+      .price-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+      }
+
+      .timeline {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.5rem;
+      }
+
+      .requirements {
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+      }
+
+      .requirements h3 {
+        font-size: 0.8rem;
+      }
+
+      .requirements li {
+        font-size: 0.75rem;
+        line-height: 1.4;
+      }
+
+      .tab {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.4rem;
+      }
+
+      .btn {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8rem;
+      }
+
+      /* Payment section mobile */
+      .payment-section {
+        padding: 1.5rem 0;
+      }
+
+      .payment-container h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* About section mobile */
+      .about-section {
+        padding: 2rem 0;
+      }
+
+      .about-container h2 {
+        font-size: 1.3rem;
+      }
+
+      .about-text p {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .profile-circle {
+        width: 70px;
+        height: 70px;
+        font-size: 1.75rem;
+      }
+    }
+
+    /* Fix for notched phones */
+    @supports(padding: max(0px)) {
+      .header-content, 
+      .container,
+      .modal {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
       }
     }
 
